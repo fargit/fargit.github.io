@@ -1,24 +1,84 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <title>Page Title</title>
-      <!--     <link rel="stylesheet" type="text/css" herf="allstyles.css" -->
-      <!--     <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">     -->
-        <style>
-              body {
-                background-image: url('background.jpg');
-                background-size:     100% 100%;                     
-                background-repeat:   no-repeat;
-                background-position: center center;
-              }
-          </style>
-    </head>
+<!DOCTYPE html >
+<html style="height: 100%;">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
 
-    <body>
-          <h1>This is a Heading</h1>
-          <p>This is a paragraph.</p>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Contact Us</a>
+            </nav>
+            <img src="./images/WWF-VHS-768x198.jpg" with="100" height="50">
+
+        </div>
+    </div>
+      <div class="container">
+          <form action="/action_page.php">
+            <label for="groups">Particpant group: </label>
+            <select name="group" id="group">
+              <option value="climate fit participant">climate fit participant</option>
+              <option value="a specific organisation">specific organisationb</option>
+              <option value="a community">a community</option>
+              <option value="Other">Other</option>
+            </select>
+            <br><br>
+            <label for="groups">Sector: </label>
+            <select name="group" id="group">
+              <option value="energy">energy</option>
+              <option value="mobility">mobility</option>
+              <option value="diet">diet</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+      </div>    
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2016 Your Company</div>
+                
+    </div>
+
+    
+    <!-- <p>Click the "Submit" button and the form-data will be sent to a page on the 
+    server called "action_page.php".</p>
+     -->
     </body>
-  </body>
-
-
+</body>
 </html>
+
